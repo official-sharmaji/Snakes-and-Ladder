@@ -2,11 +2,8 @@ let tog = 1
 let rollingSound = new Audio('dice-rolling.mp3')
 let winSound = new Audio('win.mp3')
 
-
-
 let p1sum = 0
 let p2sum = 0
-
 
 function play(player, psum, correction, num) {
     let sum
@@ -58,8 +55,6 @@ function play(player, psum, correction, num) {
 
         sum = p1sum
 
-
-
     }
 
     if (psum == 'p2sum') {
@@ -69,8 +64,7 @@ function play(player, psum, correction, num) {
         if (p2sum > 100) {
             p2sum = p2sum - num
             // sum = p1sum
-        }
-        
+        }       
 
         if (p2sum == 2) {
             p2sum = 38
@@ -111,22 +105,15 @@ function play(player, psum, correction, num) {
 
         sum = p2sum
 
-
-
     }
 
 
     document.getElementById(`${player}`).style.transition = `linear all .5s`
 
-
-
-
-
     if (sum < 10) {
 
         document.getElementById(`${player}`).style.left = `${(sum - 1) * 62}px`
         document.getElementById(`${player}`).style.top = `${-0 * 62 - correction}px`
-
 
     }
 
@@ -175,8 +162,6 @@ function play(player, psum, correction, num) {
 
         }
 
-
-
     }
 }
 
@@ -201,8 +186,5 @@ document.getElementById("diceBtn").addEventListener("click", function () {
     }
 
     tog = tog + 1
-
-
-
 
 })
